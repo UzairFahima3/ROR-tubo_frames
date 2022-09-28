@@ -1,0 +1,5 @@
+<%= turbo_frame_tag dom_id(property) do %>
+<%= property.address %>, <%= property.street %>, <%= property.city %>, <%= property.country %>
+<%= link_to "Edit", edit_properties_path(property) %>
+<%= link_to "Delete", properties_path(property), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %><br>
+<% end %>

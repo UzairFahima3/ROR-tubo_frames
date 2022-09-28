@@ -1,0 +1,26 @@
+<h1>List of all Properties</h1>
+<!-- <p>Find me in app/views/properties/index.html.erb</p> -->
+<!-- <%= form_with(url: properties_path, method: :get, data: { turbo_frame: "properties", turbo_action: "advance"}) do |form| %>
+<%= form.label :query, "Search by Country or City" %>
+<%= form.search_field :query, oninput: "this.form.requestSubmit()" %> -->
+<!-- <%= form.submit "Search" %> -->
+<!-- <%end%> -->
+<%= render "search_form" %>
+<!-- Pratial file cut from here -->
+<ul>
+  <% @properties.each do |property| %>
+
+  <li>
+    <%= turbo_frame_tag Property.new %>
+    <%= turbo_frame_tag  "properties" do %>
+    <%= render "show", property: property%>
+    <% end %>
+  </li>
+
+  <%end%>
+
+</ul>
+
+<!-- <%= turbo_frame_tag @properties do %> -->
+<%= link_to "New Property", new_properties_path, data:{turbo_frame: dom_id(Property.new)} %>
+<!-- <%end%> -->

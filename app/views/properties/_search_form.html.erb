@@ -1,0 +1,5 @@
+<%= form_with url: search_properties_path, method: :post do |form|%>
+<%= form.search_field :query, oninput: "this.form.requestSubmit()" %>
+<% end%>
+
+<div id="search_result">Search by City or Country</div>

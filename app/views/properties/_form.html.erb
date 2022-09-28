@@ -1,0 +1,24 @@
+<%= form_with model: @property do |form| %>
+<div>
+  <%= form.label :address %><br>
+  <%= form.text_area :address %>
+</div>
+
+<div>
+  <%= form.label :street %><br>
+  <%= form.text_area :street %>
+</div>
+
+<div>
+  <%= form.label :city %><br>
+  <%= form.text_field :city %>
+</div>
+<div>
+  <%= form.label :country %><br>
+  <%= form.text_field :country %>
+</div>
+
+<div>
+  <%= form.submit %>
+</div>
+<% end %>

@@ -1,0 +1,3 @@
+<%= property.address %>, <%= property.street %>, <%= property.city %>, <%= property.country %>
+<%= link_to "Edit", edit_property_path(property) %>
+<%= link_to "Delete", property_path(property), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
